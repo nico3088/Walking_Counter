@@ -1,0 +1,79 @@
+﻿<Window x:Class="Walking_Counter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Walking_Counter"
+        mc:Ignorable="d"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="MainWindow" Height="800" Width="400">
+
+
+    <Border Padding="10">
+        <StackPanel Height="NaN" Margin="0,0,0,115">
+
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+
+                <TextBlock x:Name="debt_textblock" FontWeight="Bold"  FontStyle="Italic"  Margin="10,78,126,-19" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <Button x:Name="Contador_Negro" FontWeight="Bold" Content="00" Grid.Column="1"  Margin="126,3,0,0"  Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Background="#FFEFEEDF" Width="46"/>
+                <Button x:Name="Contador_Fran" Content="00" FontWeight="Bold" Margin="54,3,0,0" Grid.Column="2"  Background="#FFF1E98E" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Width="46"/>
+                <TextBlock Text="FRAN" FontWeight="Bold" Margin="61,51,0,0" Grid.Column="2" Background="#FFF1E98E" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <TextBlock Text="NEGRO" FontWeight="Bold" Margin="2,51,0,0" Grid.Column="2" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FFEFEEDF"/>
+                <TextBlock x:Name="Debt"  FontWeight="Bold" Margin="10,3,46,12" Background="#FFF1E98E" TextAlignment="Center" FontSize="48" Width="NaN"/>
+
+            </Grid>
+            <Grid>
+                <TextBlock Text="Who" Margin="5,19,157,-19"/>
+                <TextBlock Text="Hours" Margin="166,16,-166,-16"/>
+            </Grid>
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="260*"/>
+                    <ColumnDefinition Width="260*" />
+                    <ColumnDefinition Width="260*" />
+
+                </Grid.ColumnDefinitions>
+
+
+
+                <ComboBox x:Name="Combo"  Text="Select" Padding="2" Margin="0,18,14,41"  IsEditable="True" Height="NaN">
+                    <ComboBoxItem Background="#FFEFEEDF">Negro</ComboBoxItem>
+                    <ComboBoxItem Background="#FFF1E98E">Fran</ComboBoxItem>
+                </ComboBox>
+
+                <xctk:IntegerUpDown x:Name="Numeric_UpDown" Value="0" Minimum="0" Maximum="100" Increment="1" Grid.Column="1" Margin="0,18,0,0" Width="58" Height="31" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                <Button x:Name="Create" Margin="64,18,0,32" Grid.Column="2" Content="CREATE" Click="Button_Click" Height="NaN" />
+            </Grid>
+            <Grid>
+                <ListView x:Name="lista" Height="NaN" Margin="0,-23,0,-478" >
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="WHO" DisplayMemberBinding="{Binding Who}" Width="130"/>
+                            <GridViewColumn Header="BLOCKS" DisplayMemberBinding="{Binding Block}" Width="100"/>
+                            <GridViewColumn Header="DATE" DisplayMemberBinding="{Binding Date, StringFormat={}{0:dd/MM/yyyy}}" Width="150"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,531,22,-521" Width="168">
+                    <Button x:Name="Reset" Content="RESET" Margin="5" Click="Reset_Click"/>
+                    <Button x:Name="Save" Content="SAVE" Margin="5" Click="Save_Click"/>
+                    <Button x:Name="Cancel" Content="CANCEL" Margin="5" Click="Cancel_Click" Width="49"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Border>
+
+</Window>
