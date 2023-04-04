@@ -5,7 +5,7 @@ using System.Windows.Controls;
 using Xceed.Wpf.Toolkit.PropertyGrid.Attributes;
 using System.IO;
 
-namespace Walking_Counter
+namespace Walking_Debt
 {
     public partial class MainWindow : Window
     {

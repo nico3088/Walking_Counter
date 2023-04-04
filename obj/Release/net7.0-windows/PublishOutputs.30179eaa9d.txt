@@ -1,0 +1,6 @@
+C:\Users\Usuario\Dropbox\My PC (DESKTOP-MVTIPMF)\Desktop\Walking_Debt\Walking_Debt.exe
+C:\Users\Usuario\Dropbox\My PC (DESKTOP-MVTIPMF)\Desktop\Walking_Debt\Walking_Debt.dll
+C:\Users\Usuario\Dropbox\My PC (DESKTOP-MVTIPMF)\Desktop\Walking_Debt\Walking_Debt.deps.json
+C:\Users\Usuario\Dropbox\My PC (DESKTOP-MVTIPMF)\Desktop\Walking_Debt\Walking_Debt.runtimeconfig.json
+C:\Users\Usuario\Dropbox\My PC (DESKTOP-MVTIPMF)\Desktop\Walking_Debt\Walking_Debt.pdb
+C:\Users\Usuario\Dropbox\My PC (DESKTOP-MVTIPMF)\Desktop\Walking_Debt\Xceed.Wpf.Toolkit.dll
