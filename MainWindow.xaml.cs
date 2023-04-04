@@ -116,7 +116,6 @@ namespace Walking_Debt
                     items.Add($"{((Walk)item).Who}\t{((Walk)item).Block}\t{((Walk)item).Date:dd/MM/yyyy}");
                 }
 
-
                 File.WriteAllLines(filePath, items);
             }
         }
